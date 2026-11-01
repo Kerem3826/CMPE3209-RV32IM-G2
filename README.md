@@ -1,13 +1,8 @@
-\*\*CMPE3209 - Computer Organization\*\*
-\*\*Kerem Yılmaz - 5001240012\*\*
-\*\*G2 - Sınav notu dağılımı\*\*
+# CMPE3209 - Computer Organization Dönem Projesi
+# RISC-V LCG Grade Distribution and Analysis
+**CMPE3209 - Computer Organization / G2 - Sınav notu dağılımı / RV32IM** 
 
-\*\*RV32IM\*\*
-
-# RISC-V LCG \& Grade Distribution and Analysis
-
-
-
+**Kerem Yılmaz - 5001240012**
 
 Bu proje; C dilinde yazılmış rastgele sayı üretimi (LCG), bucket sıralama, ortalama hesabı ve baraj kontrolü algoritmalarının RISC-V assembly diline dönüştürülmesini ve \*\*RARS 1.6\*\* simülatöründeki bellek/yürütme analizlerini kapsamaktadır.
 
@@ -32,11 +27,11 @@ Bu proje; C dilinde yazılmış rastgele sayı üretimi (LCG), bucket sıralama,
 
 
 
-\* \*\*Derleyici:\*\* `RISC-V GCC 16.1.0 (riscv32-unknown-elf-gcc)`
+\* **Derleyici:** `RISC-V GCC 16.1.0 (riscv32-unknown-elf-gcc)`
 
-\* \*\*Derleyici Parametreleri:\*\* `-march=rv32im -mabi=ilp32 -O0 -mcmodel=medlow -std=c99`
+\* **Derleyici Parametreleri:** `-march=rv32im -mabi=ilp32 -O0 -mcmodel=medlow -std=c99`
 
-\* \*\*Simülatör:\*\* RARS 1.6 (RISC-V Assembler and Runtime Simulator)
+\* **Simülatör:** RARS 1.6 (RISC-V Assembler and Runtime Simulator)
 
 
 
@@ -46,11 +41,11 @@ Bu proje; C dilinde yazılmış rastgele sayı üretimi (LCG), bucket sıralama,
 
 1\. RARS 1.6 simülatörünü açın ve `G2.s` dosyasını yükleyin.
 
-2\. Klavyeden \*\*F3\*\* (Assemble) tuşuna basarak kodu derleyin.
+2\. Klavyeden **F3** (Assemble) tuşuna basarak kodu derleyin.
 
-3\. \*\*F5\*\* (Run) tuşuna basarak simülasyonu çalıştırın.
+3\. **F5** (Run) tuşuna basarak simülasyonu çalıştırın.
 
-4\. Program sonlandığında sonuçlar sol alttaki \*\*Data Segment\*\* penceresinden okunabilir.
+4\. Program sonlandığında sonuçlar sol alttaki **Data Segment** penceresinden okunabilir.
 
 
 
@@ -58,17 +53,17 @@ Bu proje; C dilinde yazılmış rastgele sayı üretimi (LCG), bucket sıralama,
 
 
 
-|    Değişken    |     Bellek Adresi (Hex)     | Hesaplanan Değer |
+|ㅤㅤDeğişkenㅤㅤ|ㅤㅤㅤㅤBellek Adresi (Hex)ㅤㅤㅤ|ㅤHesaplanan Değerㅤ|
 
-| :---           |            :---             |       :---       |
+|ㅤ:---ㅤㅤㅤㅤㅤㅤ|ㅤㅤㅤㅤㅤㅤㅤ:---ㅤㅤㅤㅤㅤㅤㅤㅤ|ㅤㅤㅤㅤ:---ㅤㅤㅤㅤ|
 
-| `bucket\[0..4]` | `0x1001009C` - `0x100100AC` | `20, 3, 6, 2, 5` |
+| `bucket\[0..4]` |ㅤ`0x1001009C` - `0x100100AC`ㅤ|ㅤ`20, 3, 6, 2, 5`ㅤ|
 
-| `mean`         |         `0x100100B0`        |       `47`       |
+|ㅤ`mean`ㅤㅤㅤㅤㅤ|ㅤㅤㅤㅤㅤㅤ`0x100100B0`ㅤㅤㅤㅤ|ㅤㅤㅤㅤ`47`ㅤㅤㅤㅤㅤ|
 
-| `below\_count`  |         `0x100100B4`        |       `19`       |
+|ㅤ`below\_count`ㅤ|ㅤㅤㅤㅤㅤ`0x100100B4`ㅤㅤㅤㅤㅤ|ㅤㅤㅤㅤ`19`ㅤㅤㅤㅤ|
 
-| `pass\_count`   |         `0x100100B8`        |       `16`       |
+|ㅤ`pass\_count`ㅤ|ㅤㅤㅤㅤㅤㅤ`0x100100B8`ㅤㅤㅤㅤ|ㅤㅤㅤㅤㅤ`16`ㅤㅤㅤㅤ|
 
 \---
 
