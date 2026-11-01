@@ -4,66 +4,67 @@
 
 **Kerem Yılmaz - 5001240012**
 
-Bu proje; C dilinde yazılmış rastgele sayı üretimi (LCG), bucket sıralama, ortalama hesabı ve baraj kontrolü algoritmalarının RISC-V assembly diline dönüştürülmesini ve \*\*RARS 1.6\*\* simülatöründeki bellek/yürütme analizlerini kapsamaktadır.
+Bu proje; C dilinde yazılmış rastgele sayı üretimi (LCG), bucket sıralama, ortalama hesabı ve baraj kontrolü algoritmalarının RISC-V assembly diline dönüştürülmesini ve **RARS 1.6** simülatöründeki bellek/yürütme analizlerini kapsamaktadır.
 
 
 
-\## 📁 Dosya Yapısı
+## 📁 Dosya Yapısı
 
 
 
-\* `G2.c` - Algoritmanın C dilindeki kaynak kütüphane kodu.
+* `G2.c` - Algoritmanın C dilindeki kaynak kütüphane kodu.
 
-\* `G2.s` - RARS 1.6 uyumlu bare-metal RISC-V assembly derleme çıktısı.
+* `G2.s` - RARS 1.6 uyumlu bare-metal RISC-V assembly derleme çıktısı.
 
-\* `CMPE3209\_5001240012\_M1.pdf` - Deney raporu (Aşama 1 bellek haritası, adres analizleri ve grafikler).
-\* `CMPE3209\_5001240012\_M1.docx` - Deney raporunun .docx versiyonu
+* `CMPE3209_5001240012_M1.pdf` - Deney raporu (Aşama 1 bellek haritası, adres analizleri ve grafikler).
 
-\* `README.md` - Proje dokümantasyonu.
+* `CMPE3209_5001240012_M1.docx` - Deney raporunun .docx versiyonu
 
-
-
-\## 🛠️ Geliştirme ve Simülasyon Ortamı
+* `README.md` - Proje dokümantasyonu.
 
 
 
-\* **Derleyici:** `RISC-V GCC 16.1.0 (riscv32-unknown-elf-gcc)`
-
-\* **Derleyici Parametreleri:** `-march=rv32im -mabi=ilp32 -O0 -mcmodel=medlow -std=c99`
-
-\* **Simülatör:** RARS 1.6 (RISC-V Assembler and Runtime Simulator)
+## 🛠️ Geliştirme ve Simülasyon Ortamı
 
 
 
-\## 🚀 Çalıştırma Adımları
+* **Derleyici:** `RISC-V GCC 16.1.0 (riscv32-unknown-elf-gcc)`
+
+* **Derleyici Parametreleri:** `-march=rv32im -mabi=ilp32 -O0 -mcmodel=medlow -std=c99`
+
+* **Simülatör:** RARS 1.6 (RISC-V Assembler and Runtime Simulator)
 
 
 
-1\. RARS 1.6 simülatörünü açın ve `G2.s` dosyasını yükleyin.
-
-2\. Klavyeden **F3** (Assemble) tuşuna basarak kodu derleyin.
-
-3\. **F5** (Run) tuşuna basarak simülasyonu çalıştırın.
-
-4\. Program sonlandığında sonuçlar sol alttaki **Data Segment** penceresinden okunabilir.
+## 🚀 Çalıştırma Adımları
 
 
 
-\## 📊 Özet Çıktılar ve Bellek Adresleri
+1. RARS 1.6 simülatörünü açın ve `G2.s` dosyasını yükleyin.
+
+2. Klavyeden **F3** (Assemble) tuşuna basarak kodu derleyin.
+
+3. **F5** (Run) tuşuna basarak simülasyonu çalıştırın.
+
+4. Program sonlandığında sonuçlar sol alttaki **Data Segment** penceresinden okunabilir.
+
+
+
+## 📊 Özet Çıktılar ve Bellek Adresleri
 
 
 
 |ㅤㅤDeğişkenㅤㅤ|ㅤㅤㅤㅤBellek Adresi (Hex)ㅤㅤㅤ|ㅤHesaplanan Değerㅤ|
 
-|ㅤ:---ㅤㅤㅤㅤㅤㅤ|ㅤㅤㅤㅤㅤㅤㅤ:---ㅤㅤㅤㅤㅤㅤㅤㅤ|ㅤㅤㅤㅤ:---ㅤㅤㅤㅤ|
+|ㅤ:---ㅤㅤㅤㅤㅤㅤ|ㅤㅤㅤㅤㅤㅤㅤ:---ㅤㅤㅤㅤㅤㅤㅤ|ㅤㅤㅤㅤ:---ㅤㅤㅤㅤ|
 
-| `bucket\[0..4]` |ㅤ`0x1001009C` - `0x100100AC`ㅤ|ㅤ`20, 3, 6, 2, 5`ㅤ|
+|ㅤ`bucket\[0..4]`ㅤ|ㅤ`0x1001009C`ㅤ-ㅤ`0x100100AC`ㅤ|ㅤ`20, 3, 6, 2, 5`ㅤ|
 
-|ㅤ`mean`ㅤㅤㅤㅤㅤ|ㅤㅤㅤㅤㅤㅤ`0x100100B0`ㅤㅤㅤㅤ|ㅤㅤㅤㅤ`47`ㅤㅤㅤㅤㅤ|
+|ㅤㅤㅤ`mean`ㅤㅤㅤ|ㅤㅤㅤㅤㅤ`0x100100B0`ㅤㅤㅤㅤㅤ|ㅤㅤㅤㅤ`47`ㅤㅤㅤㅤ|
 
 |ㅤ`below\_count`ㅤ|ㅤㅤㅤㅤㅤ`0x100100B4`ㅤㅤㅤㅤㅤ|ㅤㅤㅤㅤ`19`ㅤㅤㅤㅤ|
 
-|ㅤ`pass\_count`ㅤ|ㅤㅤㅤㅤㅤㅤ`0x100100B8`ㅤㅤㅤㅤ|ㅤㅤㅤㅤㅤ`16`ㅤㅤㅤㅤ|
+|ㅤ`pass\_count`ㅤ|ㅤㅤㅤㅤㅤㅤ`0x100100B8`ㅤㅤㅤㅤㅤ|ㅤㅤㅤㅤ`16`ㅤㅤㅤㅤ|
 
 \---
 
